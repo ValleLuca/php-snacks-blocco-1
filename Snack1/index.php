@@ -9,27 +9,26 @@ $squadre = [
         'pOspite' => '11',
     ],
     [
-        'sCasa1' => 'casa2',
-        'sOspite1' => 'ospite2',
-        'pCasa1' => '12',
-        'pOspite1' => '13',
+        'sCasa' => 'casa2',
+        'sOspite' => 'ospite2',
+        'pCasa' => '12',
+        'pOspite' => '13',
     ],
     [
-        'sCasa2' => 'casa3',
-        'sOspite2' => 'ospite3',
-        'pCasa2' => '14',
-        'pOspite1' => '15',
+        'sCasa' => 'casa3',
+        'sOspite' => 'ospite3',
+        'pCasa' => '14',
+        'pOspite' => '15',
     ],
     [
-        'sCasa3' => 'casa4',
-        'sOspite3' => 'ospite4',
-        'pCasa3' => '16',
-        'pOspite3' => '17',
+        'sCasa' => 'casa4',
+        'sOspite' => 'ospite4',
+        'pCasa' => '16',
+        'pOspite' => '17',
     ]
 
 ];
 
-$i=0;
 
 ?>
 
@@ -42,11 +41,19 @@ $i=0;
     <title>Snack A</title>
 </head>
 <body>
-    <pre>
-        <?php
-            for($i = 1; $i <= count($squadre); $i++)
-                print_r($squadre[$i]);
-        ?>
-    </pre>
+    <?php
+        for($i = 0; $i < count($squadre); $i++){  //ciclo 
+
+            echo $squadre[$i]["sCasa"];           //squadra casa
+            echo " - ";
+            echo $squadre[$i]["sOspite"];         //squadra ospite
+            echo " | ";
+            echo $squadre[$i]["pCasa"];           //punti squadra casa
+            echo "-";
+            echo $squadre[$i]["pOspite"];         //punti squadra opsite
+            echo "<br>";
+
+        }
+    ?>
 </body>
 </html>
